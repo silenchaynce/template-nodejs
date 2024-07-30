@@ -6,6 +6,10 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.json({message: 'Hallooo'});
+});
+
+app.get('/coba/:id', (req, res) => {
+    res.json({message: 'ada paramsnya', data:id});
 })
 
 app.get('/tes', (res, res) => {
