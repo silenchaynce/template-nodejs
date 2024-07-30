@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
     res.json({message: 'Hallooo'});
 });
 
+app.get('/berhasil', (req, res) => {
+    res.json({message: 'Yeaayy Berhasil'});
+})
+
 app.get('/coba/:id', (req, res) => {
     res.json({message: 'ada paramsnya', data:id});
 })
