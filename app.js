@@ -16,9 +16,9 @@ app.get('/coba/:id', (req, res) => {
     res.json({message: 'ada paramsnya', data:id});
 })
 
-app.get('/tes', (res, res) => {
-    res.json({ message: 'Masoookk tesnya', kode: 200});
-});
+app.get('/tes', (req, res) => {
+    res.json({message: 'masoook tesnya'});
+})
 
 app.get('*', (req, res) => {
     res.redirect('/');
