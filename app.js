@@ -24,6 +24,12 @@ app.get('*', (req, res) => {
     res.redirect('/');
 })
 
-app.listen(port, () => {
-    console.log(`App listening on port ${port}`);
-})
+
+const server = app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+  // Tambahkan baris berikut:
+  if (process.env.NODE_ENV === 'jenkins') {
+    console.log('Server started successfully. Exiting for Jenkins.');
+    process.exit(0);
+  }
+});
