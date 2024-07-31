@@ -5,6 +5,9 @@ module.exports = {
     args: "start",
     env: {
       NODE_ENV: "production",
+    },
+    env_jenkins: {
+      NODE_ENV: "jenkins",
     }
   }]
 }
